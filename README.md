@@ -29,5 +29,4 @@ npm run build
 
 ## 程序截图
 <img src="http://51purse.com/Home.png" width="200" />
-![](http://51purse.com/Home.png =100)
-![](http://51purse.com/getCar.png =100)
+<img src="http://51purse.com/getCar.png" width="200" />
