@@ -1,5 +1,5 @@
 <template>
-  <div id="AddCar">
+  <div id="AddCar" class="car-list">
     <table class="table table-striped table-hover">
       <thead>
         <tr>
@@ -48,9 +48,8 @@
     }
   }
 </script>
-<style>
-  .container {
+<style scoped>
+  .car-list {
     margin-top: -40px;
-    margin-bottom: 40px;
   }
 </style>
