@@ -52,10 +52,12 @@
       addCar: function () {
         if (!this.carNo) {
           this.addMessage = '请输入共享的车牌号,希望您认真填写.'
+          _this.showModal = true
           return false
         }
         if (!this.carPwd) {
           this.addMessage = '请输入共享的解锁密码,希望您认真填写.'
+          _this.showModal = true
           return false
         }
         var _this = this
