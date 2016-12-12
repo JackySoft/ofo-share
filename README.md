@@ -28,5 +28,6 @@ npm run build
 * 后端的代码，我这里不方便共享，因为涉及到很多程序，51purse.com本身是我做的一个记账的项目，功能很多，所以这个地方只共享了前端程序。
 
 ## 程序截图
+<img src="http://51purse.com/Home.png" width="200" />
 ![](http://51purse.com/Home.png =100)
 ![](http://51purse.com/getCar.png =100)
