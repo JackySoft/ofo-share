@@ -25,7 +25,7 @@
                   很抱歉,当前车辆未解锁,您可以共享此密码.
                </div>
               <div v-if="totalNum == 1">
-                恭喜您,当前车辆已解锁,解锁密码为:{{carList[0].carPwd}}
+                恭喜您,解锁成功,解锁密码为:<em class="carNo">{{carList[0].carPwd}}</em>
               </div>
               <div v-if="totalNum > 1">
                   <table class="table table-striped table-hover">
@@ -41,7 +41,9 @@
               </div>
             </div>
             <div class="modal-footer text-center">
-              <router-link class="btn btn-info btn-block" @click="showModal=false" to="/">知道了,回到首页</router-link>
+              <router-link class="btn btn-info btn-block" @click="showModal=false" to="/" v-if="totalNum == 1">Thank You</router-link>
+              <router-link class="btn btn-info" @click="showModal=false" to="/" v-if="totalNum == 0">回首页</router-link>
+              <router-link class="btn btn-primary" @click="showModal=false" to="/AddCar" v-if="totalNum == 0">去共享</router-link>
             </div>
           </div>
         </div>
@@ -90,5 +92,11 @@
     left: 50%;
     width: 80%;
     margin:0;
+  }
+  .carNo{
+    font-size: 2rem;
+    color: red;
+    font-weight: bolder;
+    margin-left: 10px;
   }
 </style>

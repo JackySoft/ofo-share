@@ -19,6 +19,7 @@
       </tbody>
     </table>
     <a href="javascript:;" class="btn btn-me btn-lg btn-block" @click="getCarList(++currentPage)" v-if="carList.length==10">下一页</a>
+    <router-link class="btn btn-me btn-lg btn-block" to="/" v-if="carList.length<10">返回首页</router-link>
   </div>
 </template>
 <script>
@@ -51,5 +52,6 @@
 <style scoped>
   .car-list {
     margin-top: -40px;
+    padding-bottom: 40px;
   }
 </style>

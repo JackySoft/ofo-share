@@ -28,9 +28,9 @@
     height: 50%;
     transform-origin: center center;
     transition-property: transform,-webkit-transform;
-    transform: translate(50%,20%) scale(1);
+    transform: translate(50%,10%) scale(1);
     transition-duration: 1s;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     text-align: center;
   }
   .expanded .pay{

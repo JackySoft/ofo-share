@@ -29,7 +29,8 @@
 
           </div>
           <div class="modal-footer text-center">
-            <router-link class="btn btn-info btn-block" @click="showModal=false" to="/">不客气,回到首页</router-link>
+            <a class="btn btn-info btn-block" @click="showModal=false" v-if="invalid">知道了</a>
+            <router-link class="btn btn-info btn-block" @click="showModal=false" to="/" v-if="!invalid">不客气,回到首页</router-link>
           </div>
         </div>
       </div>
@@ -45,22 +46,26 @@
         'carNo': '',
         'carPwd': '',
         'showModal': false,
-        'addMessage': ''
+        'addMessage': '',
+        'invalid': false
       }
     },
     methods: {
       addCar: function () {
         if (!this.carNo) {
           this.addMessage = '请输入共享的车牌号,希望您认真填写.'
-          _this.showModal = true
+          this.showModal = true
+          this.invalid = true
           return false
         }
         if (!this.carPwd) {
           this.addMessage = '请输入共享的解锁密码,希望您认真填写.'
-          _this.showModal = true
+          this.showModal = true
+          this.invalid = true
           return false
         }
         var _this = this
+        this.invalid = false
         this.$http.get('/ofo!addCarInfo.action', {
           params: {
             carNo: this.carNo,
